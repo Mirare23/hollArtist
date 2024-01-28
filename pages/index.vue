@@ -30,12 +30,13 @@
 <script setup>
 import gsap from "gsap"
 import SplitType from "split-type"
-const tl = gsap.timeline()
+
 const text = ref(null)
 const image = ref(null)
 const imagewrapper = ref(null)
 const color = ref(null)
 onMounted(() => {
+  const tl = gsap.timeline()
   const split = new SplitType(text.value.children, { types: "chars" })
 
   tl.from(split.chars, {
